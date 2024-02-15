@@ -1,0 +1,280 @@
+:root {
+    --i: 0%;
+    --clr: #0a2c3a;
+    --sitclr: #B5E1F7;
+    --minHauteur: 79vh;
+}
+
+*,
+::after,
+::before {
+    box-sizing: content-box;
+    margin: 0;
+}
+
+input.dis_inp[disabled] {
+    border: none;
+}
+
+/* Personnalisation des boutons de rotation pour tous les navigateurs */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+
+/* Reset default styles for the input */
+input[type="date"] {
+    /* display: grid;
+    justify-items: center;
+    align-content: center;
+    align-items: baseline; */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0;
+    border: none;
+    /* border-bottom: 1px solid black; */
+    background-color: transparent;
+    width: 111px;
+    /* Set the width of the input to fit the icon */
+    /* height: 33px; */
+    /* Set the height of the input to fit the icon */
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    /* display: none;
+    -webkit-appearance: none; */
+    margin: 0;
+}
+
+/* input[type="date"]::-webkit-datetime-edit {
+    display: none;
+} */
+
+/* ####################### */
+/* login */
+/* ####################### */
+
+
+.back_image {
+    position: fixed;
+    z-index: -1;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+}
+
+div.passwordform {
+    position: relative;
+}
+
+
+div.passwordform>i.fas {
+    position: absolute;
+    top: 7px;
+    left: 9px;
+}
+
+#toggler {
+    cursor: pointer;
+}
+
+@media (max-width: 450px) {
+    .h-custom {
+        height: 100%;
+    }
+}
+
+body {
+    color: #1a202c;
+    text-align: left;
+    background-color: #e2e8f0;
+    margin: 8px;
+    line-height: normal;
+    font-weight: none;
+    font-size: none;
+}
+
+
+nav.topnav {
+    position: relative;
+    overflow: hidden;
+    /* background-color: #c5e7f8; */
+    background: rgba(184, 226, 235, 0.5);
+    border-radius: 10px;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 12px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    transition: 0.5s ease;
+}
+
+
+nav.topnav a:hover {
+    color: #B5E1F7;
+}
+
+nav.topnav a.active {
+    text-align: center;
+    padding: 8px;
+    background-color: #ffffffd9;
+    border-radius: 20px;
+    display: inline-block;
+    box-shadow: 0px 0px 17px 10px #bfc1c166;
+}
+
+img.logo {
+    width: 180px;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+
+
+
+.navbar>span:hover {
+    color: #B5E1F7;
+}
+
+.icon_shape {
+    position: absolute;
+    top: -2rem;
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background-color: var(--sitclr);
+    padding: 7px;
+    border-radius: 10px;
+}
+
+div>details.card_detailes {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+div>details.card_detailes[open] {
+    background: aliceblue;
+    z-index: 1;
+    padding: 0px 20px 20px 10px;
+    border-radius: 15px;
+}
+
+.cards_info_footer {
+    position: relative;
+    padding: 10px;
+    height: 50px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenavconf (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenavconf {
+        padding-top: 15px;
+    }
+
+    .sidenavconf a {
+        font-size: 18px;
+    }
+}
+
+.stinput {
+    border: none;
+    background: var(--bs-gray-200);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.modal {
+    /* membre modal */
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(143, 143, 143, 0.01);
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 120%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+/* The Close Button */
+.close-modal {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #02afca;
+    color: white;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #02afca;
+    color: white;
+}
