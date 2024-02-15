@@ -1,0 +1,1 @@
+CREATE TABLE personnel( id_personnel INT AUTO_INCREMENT, email VARCHAR(50) NOT NULL, pr_passe TEXT, nom VARCHAR(50) NOT NULL, prenom VARCHAR(40) NOT NULL, PRIMARY KEY(id_personnel), UNIQUE(email) ); 
